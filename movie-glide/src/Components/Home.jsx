@@ -1,19 +1,12 @@
-import { Link } from "react-router-dom";
-import Navigation from "./Navigation";
+
 
 
 function Home() {
     return (
        <div>
-           
-            <Navigation />
-                
-
-            <nav>
-                <Link to={"/navlinks"} className="text-white">Nav Links</Link>
-            </nav>
+           <h1 className="text-white">This is my homepage</h1>
        </div>
-    )
+    );
 }
 
 export default Home;

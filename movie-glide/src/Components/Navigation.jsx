@@ -18,7 +18,7 @@ function Navigation() {
                     Movie Glide
                 </Link>
 
-                {/* Desktop Menu */}
+                {/* Desktop */}
                 <nav className="hidden md:flex space-x-8 items-center">
                     <Link to="/" className={linkClasses}>Home</Link>
                     <Link to="/about" className={linkClasses}>About</Link>
@@ -33,7 +33,7 @@ function Navigation() {
                 </div>
             </div>
 
-            {/* Mobile Menu (Dropdown) */}
+            {/* Mobile */}
             <div className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out bg-gray-800 ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
                 <nav className="flex flex-col items-center space-y-4 py-4">
                     <Link to="/" className={linkClasses} onClick={toggleMenu}>Home</Link>
