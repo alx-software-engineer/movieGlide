@@ -10,8 +10,10 @@ function Hambuger() {
 
     return (
         <div>
-            {visible ? <FaBars className="text-3xl" onClick={toggleNavLinks} />  : <h1>Hi</h1>}
-            
+
+            <button onClick={toggleNavLinks}>
+                {visible ? <FaBars className="text-3xl" />  : "Hi"}
+            </button>
 
         </div>
 
