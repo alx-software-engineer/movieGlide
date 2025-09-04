@@ -1,15 +1,18 @@
 import { Outlet } from "react-router-dom";
 import Navigation from "./Navigation";
+import Footer from "./Footer";
 
 
 function Layout() {
     return (
-       <div>
+       <div className="flex flex-col min-h-screen">
             <Navigation />
 
-            <main className="container mx-auto p-4">
+            <main className="flex-grow container mx-auto p-4">
                 <Outlet />
             </main>   
+
+            <Footer />
        </div>
     );
 }
