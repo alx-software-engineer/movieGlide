@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Components/Home'
-import AboutUs from './Components/AboutUs'
+import AboutUs from './Components/FilmDetails'
 import ContactUs from './Components/ContactUs'
 import Navigation from './Components/Navigation'
 import Layout from './Components/Layout'
+import NoPageFound from './Components/NoPageFound'
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/aboutUs" element={<AboutUs />} /> 
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/navlinks" element={<Navigation />} />
+          <Route path="*" element={<NoPageFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
