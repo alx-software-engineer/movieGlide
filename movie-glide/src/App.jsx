@@ -1,11 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './Components/Home'
-import AboutUs from './Components/FilmDetails'
 import ContactUs from './Components/ContactUs'
 import Navigation from './Components/Navigation'
 import Layout from './Components/Layout'
 import NoPageFound from './Components/NoPageFound'
-import './App.css';
 import MovieDetails from './Components/MovieDetails'
 
 function App() {

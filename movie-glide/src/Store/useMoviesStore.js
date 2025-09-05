@@ -4,7 +4,7 @@ const useMovieStore = create((set) => ({
     movieList: [],
 
     addMovies: (newMovies) => {
-        set((state) => ({movies : [...state.movieList, ...newMovies]}));
+        set((state) => ({movieList : [...state.movieList, ...newMovies]}));
     },
 }))
 
