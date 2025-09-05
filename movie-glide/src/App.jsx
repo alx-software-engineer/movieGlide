@@ -6,6 +6,7 @@ import Navigation from './Components/Navigation'
 import Layout from './Components/Layout'
 import NoPageFound from './Components/NoPageFound'
 import './App.css';
+import MovieDetails from './Components/MovieDetails'
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/aboutUs" element={<AboutUs />} /> 
+          <Route path="/movie/:id" element={<MovieDetails />} /> 
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/navlinks" element={<Navigation />} />
           <Route path="*" element={<NoPageFound />} />

@@ -10,7 +10,7 @@ function Navigation() {
     const linkClasses = "text-secondary hover:text-primary transition duration-300";
 
     return (
-        <header className="bg-gray-900 text-white shadow-md sticky top-0 z-50">
+        <header className="bg-gray-900 text-white shadow-md sticky top-0 z-50 mb-8">
             <div className="container mx-auto flex justify-between items-center p-4">
                 
                 

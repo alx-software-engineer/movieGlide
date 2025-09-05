@@ -5,7 +5,7 @@ import UpcomingBtn from "./UpcomingBtn";
 function Home() {
     return (
        <div>
-            <h1 className="text-secondary text-center mb-5"> 
+            <h1 className="text-secondary text-center mb-7"> 
                 Discover the series streaming
                 Experience with  <span className="font-bold">MovieGlide</span>
             </h1>
