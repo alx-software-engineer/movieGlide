@@ -2,7 +2,7 @@ import GetStartedBtn from "./GetStartedBtn";
 import UpcomingBtn from "./UpcomingBtn";
 import { useEffect } from "react";
 import useMovieStore from "../Store/useMoviesStore";
-import { fetchPopularMovies } from "../Services/api";
+import { fetchTrendingMovies,  } from "../Services/api";
 import MovieList from "./MovieList";
 
 
@@ -14,6 +14,8 @@ function Home() {
     const addMovies = useMovieStore((state) => state.addMovies);
     const setLoading = useMovieStore((state) => state.setLoading);
     const setError = useMovieStore((state) => state.setError);
+    const trendingMovies = useMovieStore((state) => state.trendingMovies);
+    const setTrendingMovies = useMovieStore((state) => state.setTrendingMovies);
 
 
     useEffect(() => {
@@ -21,8 +23,8 @@ function Home() {
       try {
         setLoading(true);
         setError(null);
-        const movies = await fetchPopularMovies();
-        addMovies(movies);
+        const movies = await fetchTrendingMovies();
+        setTrendingMovies(movies);
       } catch (err) {
         setError("Failed to load movies. Please try again later.");
       } finally {
@@ -31,16 +33,16 @@ function Home() {
     };
     
     // Only fetch movies if our list is empty
-    if (movieList.length === 0) {
+    if (trendingMovies.length === 0) {
         loadMovies();
     }
-  }, [movieList.length, addMovies, setLoading, setError]);
+  }, [trendingMovies.length, setTrendingMovies, setLoading, setError]);
 
 
 
     return (
        <div>
-            <h1 className="text-secondary text-center mb-7"> 
+            <h1 className="text-secondary text-center mb-7 text-xl md:text-3xl lg:text-4xl"> 
                 Discover the series streaming
                 Experience with  <span className="font-bold">MovieGlide</span>
             </h1>
@@ -64,8 +66,8 @@ function Home() {
                 {/* Movie List */}
             {!isLoading && !error && (
                 <div>
-                     <h1 className="text-2xl font-bold text-primary mb-3">Popular Movies</h1>
-                    <MovieList movies={movieList} />
+                     <h1 className="text-2xl font-bold text-primary mb-3">Trending</h1>
+                    <MovieList movies={trendingMovies} />
                 </div>
             )}
 
