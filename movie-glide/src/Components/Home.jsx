@@ -2,7 +2,7 @@ import GetStartedBtn from "./GetStartedBtn";
 import UpcomingBtn from "./UpcomingBtn";
 import { useEffect } from "react";
 import useMovieStore from "../Store/useMoviesStore";
-import { fetchTrendingMovies,  } from "../Services/api";
+import { fetchTrendingMovies,  fetchPopularMovies} from "../Services/api";
 import MovieList from "./MovieList";
 
 
@@ -11,7 +11,7 @@ function Home() {
     const movieList = useMovieStore((state) => state.movieList);
     const isLoading = useMovieStore((state) => state.isLoading);
     const error = useMovieStore((state) => state.error);
-    const addMovies = useMovieStore((state) => state.addMovies);
+    const setMovies = useMovieStore((state) => state.setMovies);
     const setLoading = useMovieStore((state) => state.setLoading);
     const setError = useMovieStore((state) => state.setError);
     const trendingMovies = useMovieStore((state) => state.trendingMovies);
@@ -25,6 +25,8 @@ function Home() {
         setError(null);
         const movies = await fetchTrendingMovies();
         setTrendingMovies(movies);
+        const popular = await fetchPopularMovies();
+        setMovies(popular);
       } catch (err) {
         setError("Failed to load movies. Please try again later.");
       } finally {
@@ -33,10 +35,10 @@ function Home() {
     };
     
     // Only fetch movies if our list is empty
-    if (trendingMovies.length === 0) {
+    if (movieList.length === 0 && trendingMovies.length === 0) {
         loadMovies();
     }
-  }, [trendingMovies.length, setTrendingMovies, setLoading, setError]);
+  }, [trendingMovies.length, movieList.length, setMovies, setTrendingMovies, setLoading, setError]);
 
 
 
@@ -66,8 +68,17 @@ function Home() {
                 {/* Movie List */}
             {!isLoading && !error && (
                 <div>
-                     <h1 className="text-2xl font-bold text-primary mb-3">Trending</h1>
-                    <MovieList movies={trendingMovies} />
+                    {/* Trending Movies Section */}
+                    <section className="mb-12">
+                      <h2 className="text-2xl font-bold text-primary mb-6">Trending This Week</h2>
+                      <MovieList movies={trendingMovies} />
+                    </section>
+
+                    {/* Popular Movies Section */}
+                    <section>
+                      <h2 className="text-2xl font-bold text-primary mb-6">Popular Movies</h2>
+                      <MovieList movies={movieList} />
+                    </section>
                 </div>
             )}
 
