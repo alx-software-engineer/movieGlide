@@ -55,15 +55,15 @@ cd movie-glide
 npm install
 ```
 
-Set up environment variables:
+# Set up environment variables:
 
-Create a .env file in the root of your project.
+- Create a .env file in the root of your project.
 
-Add your TMDb API key. The variable name must start with VITE_.
+- Add your TMDb API key. The variable name must start with VITE_.
 
-VITE_TMDB_API_KEY="your_api_key"
+`VITE_TMDB_API_KEY="your_api_key"`
 
-Run the development server:
+- Run the development server:
 
 ```bash
 npm run dev
