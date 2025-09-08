@@ -16,10 +16,15 @@ Responsive Design: A clean user interface that works perfectly on mobile, tablet
 # 🛠️ Technology Stack
 
 - Framework: React (with Vite)
+
 - Styling: Tailwind CSS v4
+
 - State Management: Zustand
+
 - Routing: React Router
+
 - Data Fetching: Axios
+
 - API: The Movie Database (TMDb)
 
 # 🚀 Getting Started
@@ -27,23 +32,22 @@ Responsive Design: A clean user interface that works perfectly on mobile, tablet
 # Follow these steps to get a local copy of the project up and running.
 
 # Prerequisites
-Node.js (v18 or higher)
+- Node.js (v18 or higher)
 
- An API key from The Movie Database (TMDb)
+- An API key from The Movie Database (TMDb)
 
 # Installation
 
-Clone the repository:
+- Clone the repository:
 
-git clone https://github.com/alx-software-engineer/movieGlide.git
+- git clone https://github.com/alx-software-engineer/movieGlide.git
 
-
-cd movie-glide
+- cd movie-glide
 
 
 # Install dependencies:
 
-npm install
+```npm install```
 
 Set up environment variables:
 
@@ -55,7 +59,7 @@ VITE_TMDB_API_KEY="your_api_key"
 
 Run the development server:
 
-npm run dev
+`npm run dev`
 
 
 # 👤 Author
