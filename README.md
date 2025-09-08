@@ -15,17 +15,12 @@ Responsive Design: A clean user interface that works perfectly on mobile, tablet
 
 # 🛠️ Technology Stack
 
- Framework: React (with Vite)
-
- Styling: Tailwind CSS v4
-
-State Management: Zustand
-
-Routing: React Router
-
-Data Fetching: Axios
-
-API: The Movie Database (TMDb)
+- Framework: React (with Vite)
+- Styling: Tailwind CSS v4
+- State Management: Zustand
+- Routing: React Router
+- Data Fetching: Axios
+- API: The Movie Database (TMDb)
 
 # 🚀 Getting Started
 
