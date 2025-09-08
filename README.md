@@ -40,7 +40,9 @@ A clean and responsive movie discovery web application built with modern front-e
 
 - Clone the repository:
 
-` git clone https://github.com/alx-software-engineer/movieGlide.git `
+```bash
+git clone https://github.com/alx-software-engineer/movieGlide.git
+```
 
 ```bash
 cd movie-glide
