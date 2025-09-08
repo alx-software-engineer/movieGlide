@@ -2,7 +2,7 @@
 
 A clean and responsive movie discovery web application built with modern front-end technologies. Browse trending and popular movies, and view detailed information for any title.
 
-![Screenshot of MovieGlide app](Movie-glide/MyApp.PNG)
+![Screenshot of MovieGlide app](MyApp.PNG)
 
 # ✨ Core Features
  Discover Movies: View lists of "Trending" and "Popular" movies on the homepage.
