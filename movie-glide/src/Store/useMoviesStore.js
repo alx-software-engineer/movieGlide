@@ -6,6 +6,10 @@ const useMovieStore = create((set) => ({
     error: null,
     trendingMovies: [],
 
+    allMovies : [],
+
+    setAllMovies : (movies) => set({allMovies : movies}),
+
     // Add Movies
     setMovies: (newMovies) => set({movieList : newMovies}),
 

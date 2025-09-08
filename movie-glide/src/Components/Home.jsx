@@ -16,6 +16,8 @@ function Home() {
     const setError = useMovieStore((state) => state.setError);
     const trendingMovies = useMovieStore((state) => state.trendingMovies);
     const setTrendingMovies = useMovieStore((state) => state.setTrendingMovies);
+    const setAllMovies = useMovieStore((state) => state.setAllMovies);
+    const allMovies = useMovieStore((state) => state.allMovies);
 
 
     useEffect(() => {
@@ -23,10 +25,18 @@ function Home() {
       try {
         setLoading(true);
         setError(null);
-        const movies = await fetchTrendingMovies();
-        setTrendingMovies(movies);
+        const trending = await fetchTrendingMovies();
+        setTrendingMovies(trending);
         const popular = await fetchPopularMovies();
         setMovies(popular);
+
+        // All Movies
+        const allMoviesMap = new Map();
+        trending.forEach(movie => allMoviesMap.set(movie.id, movie));
+        popular.forEach(movie => allMoviesMap.set(movie.id, movie));
+        setAllMovies(Array.from(allMoviesMap.values()));
+
+
       } catch (err) {
         setError("Failed to load movies. Please try again later.");
       } finally {
@@ -35,10 +45,10 @@ function Home() {
     };
     
     // Only fetch movies if our list is empty
-    if (movieList.length === 0 && trendingMovies.length === 0) {
+    if (allMovies.length === 0 ) {
         loadMovies();
     }
-  }, [trendingMovies.length, movieList.length, setMovies, setTrendingMovies, setLoading, setError]);
+  }, [trendingMovies.length, movieList.length, setAllMovies, setMovies, setTrendingMovies, setLoading, setError]);
 
 
 
