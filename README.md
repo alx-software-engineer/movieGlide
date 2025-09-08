@@ -5,13 +5,13 @@ A clean and responsive movie discovery web application built with modern front-e
 ![Screenshot of MovieGlide app](MyApp.PNG)
 
 # ✨ Core Features
- Discover Movies: View lists of "Trending" and "Popular" movies on the homepage.
+- Discover Movies: View lists of "Trending" and "Popular" movies on the homepage.
 
-Detailed View: Click on any movie to see its full details, including overview, genres, and runtime.
+- Detailed View: Click on any movie to see its full details, including overview, genres, and runtime.
 
-Dynamic Routing: Seamless navigation between pages with unique URLs for each movie.
+- Dynamic Routing: Seamless navigation between pages with unique URLs for each movie.
 
-Responsive Design: A clean user interface that works perfectly on mobile, tablet, and desktop.
+- Responsive Design: A clean user interface that works perfectly on mobile, tablet, and desktop.
 
 # 🛠️ Technology Stack
 
@@ -40,14 +40,14 @@ Responsive Design: A clean user interface that works perfectly on mobile, tablet
 
 - Clone the repository:
 
-- git clone https://github.com/alx-software-engineer/movieGlide.git
+` git clone https://github.com/alx-software-engineer/movieGlide.git `
 
-- cd movie-glide
+`cd movie-glide`
 
 
 # Install dependencies:
 
-```npm install```
+`npm install`
 
 Set up environment variables:
 
