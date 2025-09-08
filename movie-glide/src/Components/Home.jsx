@@ -80,13 +80,13 @@ function Home() {
                 <div>
                     {/* Trending Movies Section */}
                     <section className="mb-12">
-                      <h2 className="text-2xl font-bold text-primary mb-6">Trending This Week</h2>
+                      <h2 className="font-bold text-primary mb-6">Trending This Week</h2>
                       <MovieList movies={trendingMovies} />
                     </section>
 
                     {/* Popular Movies Section */}
                     <section>
-                      <h2 className="text-2xl font-bold text-primary mb-6">Popular Movies</h2>
+                      <h2 className="font-bold text-primary mb-6">Popular Movies</h2>
                       <MovieList movies={movieList} />
                     </section>
                 </div>

@@ -39,3 +39,19 @@ export const fetchPopularMovies = async () => {
         throw error;
     }
 }
+
+
+// Movie Details
+export const fetchMovieDetails = async (movieId) => {
+  try {
+    const response = await api.get(`/movie/${movieId}`, {
+      params: {
+        api_key: apiKey,
+      }
+    });
+    return response.data; 
+  } catch (error) {
+    console.error(`Error fetching details for movie ${movieId}:`, error);
+    throw error;
+  }
+};
