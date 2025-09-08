@@ -42,12 +42,16 @@ A clean and responsive movie discovery web application built with modern front-e
 
 ` git clone https://github.com/alx-software-engineer/movieGlide.git `
 
-`cd movie-glide`
+```bash
+cd movie-glide
+```
 
 
 # Install dependencies:
 
-`npm install`
+```bash
+npm install
+```
 
 Set up environment variables:
 
@@ -59,7 +63,9 @@ VITE_TMDB_API_KEY="your_api_key"
 
 Run the development server:
 
-`npm run dev`
+```bash
+npm run dev
+```
 
 
 # 👤 Author
