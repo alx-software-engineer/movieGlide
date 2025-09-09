@@ -5,18 +5,16 @@ const useMovieStore = create((set) => ({
     isLoading: false,
     error: null,
     trendingMovies: [],
-
     allMovies : [],
+    searchTerm: '',
 
+    // Actions
     setAllMovies : (movies) => set({allMovies : movies}),
-
-    // Add Movies
     setMovies: (newMovies) => set({movieList : newMovies}),
-
     setTrendingMovies: (movies) => set({ trendingMovies: movies }),
-
     setLoading: (status) => set({ isLoading: status }),
     setError: (message) => set({ error: message }),
+    setSearchTerm: (term) => set({ searchTerm: term }),
 }))
 
 export default useMovieStore;
