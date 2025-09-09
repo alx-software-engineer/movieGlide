@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import useMovieStore from "../Store/useMoviesStore";
 import { fetchTrendingMovies,  fetchPopularMovies} from "../Services/api";
 import MovieList from "./MovieList";
+import Search from "./Search";
 
 
 function Home() {
@@ -64,9 +65,12 @@ function Home() {
                 trend series for you to watch online and priceless
             </h2>
 
-            <div className="flex justify-center gap-8 mb-2">
+            <div className="flex justify-center mb-2 gap-4 flex-col md:flex-row md:justify-around md:items-center">
+              <div className="flex justify-center gap-8">
                 <GetStartedBtn />
                 <UpcomingBtn />
+              </div>
+               <Search />
             </div>
 
             {/* Loading */}

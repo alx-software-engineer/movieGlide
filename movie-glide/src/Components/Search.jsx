@@ -9,7 +9,7 @@ function Search() {
   };
 
   return (
-     <div className="mb-8 w-full">
+     <div className="flex justify-center mx-auto md:mx-0 mb-2 w-4/5 md:w-1/4">
       <input
         type="text"
         value={searchTerm}
